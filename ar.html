@@ -7,10 +7,14 @@
 			tx1.innerHTML = "You're on your way to:"
 			tx2.innerHTML = path
 			window.location.replace(path)
+			setTimeout(quit, 9999)
 		} else {
 			tx1.innerHTML = "This page auto-redirects to the set hash."
 			tx2.innerHTML = "Example: protocol.html#file:///C:/"
 		}
+	}
+	function quit() {
+		window.close()
 	}
 </script>
 <style>
