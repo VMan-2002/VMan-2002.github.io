@@ -2,19 +2,17 @@
 	function load() {
 		tx1 = document.getElementById("p")
 		tx2 = document.getElementById("p1")
+		tx3 = document.getElementById("p2")
 		if (location.hash) {
 			let path = location.hash.slice(1)/*.replace(/.hash./g, "#").replace(/.qmark./g, "?").replace(/.slash./g, "/").replace(/.dslash./g, "//").replace(/../g, ".")*/
 			tx1.innerHTML = "You're on your way to:"
 			tx2.innerHTML = path
+			tx3.innerHTML = "If this launches an application, you may close this tab afterward."
 			window.location.replace(path)
-			setTimeout(quit, 9999)
 		} else {
 			tx1.innerHTML = "This page auto-redirects to the set hash."
 			tx2.innerHTML = "Example: protocol.html#file:///C:/"
 		}
-	}
-	function quit() {
-		window.close()
 	}
 </script>
 <style>
@@ -29,4 +27,5 @@
 <body onload="load()">
 	<div id="p">loading... (you may need to enable javascript)</div><br>
 	<div id="p1"></div>
+	<div id="p2" style="font-size: 50%"></div>
 </body>
