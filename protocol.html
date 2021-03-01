@@ -1,0 +1,20 @@
+<script>
+	function load() {
+		tx1 = document.getElementById("p")
+		tx2 = document.getElementById("p1")
+		if (location.hash) {
+			let path = location.hash.slice(1)/*.replace(/.hash./g, "#").replace(/.qmark./g, "?").replace(/.slash./g, "/").replace(/.dslash./g, "//").replace(/../g, ".")*/
+			tx1.innerHTML = "You're on your way to:"
+			tx2.innerHTML = path
+			window.location.replace(path)
+		} else {
+			tx1.innerHTML = "This page auto-redirects to the set hash."
+			tx2.innerHTML = "Example: protocol.html#file:///C:/"
+		}
+	}
+</script>
+<div style="height: calc(50% - 50px)"></div>
+<body onload="load()" style="text-align: center; font-family: Montserrat, Roboto, Verdana, Arial, sans-serif; font-size: 200%">
+	<div id="p">loading... (you may need to enable javascript)</div><br>
+	<div id="p1"></div>
+</body>
