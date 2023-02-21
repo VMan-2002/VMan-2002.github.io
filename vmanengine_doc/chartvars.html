@@ -1,0 +1,59 @@
+<head>
+	<link href="style.css" rel="stylesheet">
+</head>
+<iframe src="sidebar.html" class="sidebar"></iframe>
+<div class="mainbox">
+	<h1>Chart variables</h1>
+	<p>These are the values that are editable in chart files, that aren't available in the chart editor yet.</p>
+	
+	<h3>newtitle <span class="vartype">(String)</span></h3>
+	<p>The song's display name in the HUD and Pause Menu.</p>
+	
+	<h3>player1 <span class="vartype">(String)</span></h3>
+	<p>The player character name</p>
+	
+	<h3>player2 <span class="vartype">(String)</span></h3>
+	<p>The enemy character name</p>
+	
+	<h3>gfVersion <span class="vartype">(String)</span></h3>
+	<p>The girlfriend character name</p>
+	
+	<h3>maniaStr <span class="vartype">(String)</span></h3>
+	<p>This is technically available in the chart editor, but using it is a pain currently. You can select any mania that is available in the Controls menu. For 25K Piano, the ID is "piano", and every other mania is formatted like "[amount of keys]k", for example: "9k"</p>
+	
+	<h3>stage <span class="vartype">(String)</span></h3>
+	<p>Name of the stage</p>
+	
+	<h3>healthDrain <span class="vartype">(Float)</span></h3>
+	<p>Amount of health that the opponent should drain when they hit a note. The player starts at 1 health, and their maximum is 2.</p>
+	
+	<h3>healthDrainMin <span class="vartype">(Float)</span></h3>
+	<p>The opponent can't drain the player's health lower than this amount.</p>
+	
+	<h3>moreCharacters <span class="vartype">(Array&#60;String&#62;)</span></h3>
+	<p>An array of characters to add in addition to the player, opponent and girlfriend.</p>
+	
+	<h3>actions <span class="vartype">(Array&#60;String&#62;)</span></h3>
+	<p>An array of actions the engine should take during the song.</p>
+	
+	<h3>noteSkin <span class="vartype">(String)</span></h3>
+	<p>Name of a noteskin file to load.</p>
+	
+	<h3>uiStyle <span class="vartype">(String)</span></h3>
+	<p>Name of a UI style file to load.</p>
+	
+	<h3>moreStrumLines <span class="vartype">(Int)</span></h3>
+	<p>Amount of extra strumlines to add. If you use this, the opponent's strumlines will be smaller. Notes in extra layers in the chart editor will be used on these new strumlines.</p>
+	
+	<h3>timeSignature <span class="vartype">(Int)</span></h3>
+	<p>How many beats are in a section.</p>
+	
+	<h3>voicesName <span class="vartype">(String)</span></h3>
+	<p>The name of the Voices audio file to play, not including the file extension.</p>
+	
+	<h3>instName <span class="vartype">(String)</span></h3>
+	<p>The name of the Inst audio file to play, not including the file extension.</p>
+	
+	<h3>picospeaker <span class="vartype">(String)</span></h3>
+	<p>The name of a chart to play on the girlfriend character, copying the behavoir of Pico in Stress in Week 7.</p>
+</div>

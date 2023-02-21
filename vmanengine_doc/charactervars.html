@@ -1,0 +1,53 @@
+<head>
+	<link href="style.css" rel="stylesheet">
+</head>
+<iframe src="sidebar.html" class="sidebar"></iframe>
+<div class="mainbox">
+	<h1>Character File variables</h1>
+	<p>These are the values that are editable in character files, cuz i havent made character editor yet. Story Menu characters are placed in a subfolder of the characters folder named "menu".</p>
+	
+	<h3>image <span class="vartype">(String)</span></h3>
+	<p>Path of an image file to use, must have an associated .xml file with the same name.</p>
+	
+	<h3>healthIcon <span class="vartype">(String)</span></h3>
+	<p>The name of a health icon to use for the character</p>
+	
+	<h3>deathChar <span class="vartype">(String)</span></h3>
+	<p>An alternative character file to use during Game Over.</p>
+	
+	<h3>deathSound <span class="vartype">(String)</span></h3>
+	<p>Sound to play when Game Over starts, default: "fnf_loss_sfx"</p>
+	
+	<h3>initAnim <span class="vartype">(String)</span></h3>
+	<p>The initial animation to play when the character is loaded.</p>
+	
+	<h3>antialias <span class="vartype">(String)</span></h3>
+	<p>Whether or not the character should use antialiasing. Makes pixels smoother, don't use this in pixel artstyle</p>
+	
+	<h3>animations <span class="vartype">(Array&#60;<span title="This type is internally referred to as SwagCharacterAnim" class="hoverable">Animation</span>&#62;)</span></h3>
+	<p>Array of the character's animations.</p>
+	
+	<h3>position <span class="vartype">(Array&#60;Float&#62;)</span></h3>
+	<p>The character's position.</p>
+	
+	<h3>isPlayer <span class="vartype">(Bool)</span></h3>
+	<p>Set to true for character spritesheets that face left.</p>
+	
+	<h3>scale <span class="vartype">(Float)</span></h3>
+	<p>How much the character should be rescaled. default: 1</p>
+	
+	<h3>danceModulo <span class="vartype">(Int)</span></h3>
+	<p>Character's idle animation should play every this amount of beats.</p>
+	
+	<h3>cameraOffset <span class="vartype">(Array&#60;Float&#62;)</span></h3>
+	<p>How much the camera should be offsetted when focusing on this character.</p>
+	
+	<h3>healthBarColor <span class="vartype">(Array&#60;Int&#62;)</span></h3>
+	<p>RGB values for the character's health bar color, from 0 to 255 each.</p>
+	
+	<h3>animNoSustain <span class="vartype">(Bool)</span></h3>
+	<p>Set to true to not repeat the first few frames while the character is singing a hold note.</p>
+	
+	<h3>isGirlfriend <span class="vartype">(Bool)</span></h3>
+	<p>Whether or not this character counts as a Girlfriend, which makes them take the Girlfriend spot if they are the opponent.</p>
+</div>

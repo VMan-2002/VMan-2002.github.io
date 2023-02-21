@@ -1,0 +1,38 @@
+<head>
+	<link href="style.css" rel="stylesheet">
+</head>
+<iframe src="sidebar.html" class="sidebar"></iframe>
+<div class="mainbox">
+	<h1>Stage variables</h1>
+	<p>These are the values that are editable in stage files. The title screen uses a stage named "_FnfTitle.json"</p>
+	
+	<h3>charPosition <span class="vartype">(Array<Array<Float>>)</span></h3>
+	<p>Array of the character positions. Player is first, then opponent, then girlfriend, then extra characters.</p>
+	
+	<h3>defaultCamZoom <span class="vartype">(Float)</span></h3>
+	<p>The camera's default zoom.</p>
+	
+	<h3>charZoom <span class="vartype">(Array<Null<Float>>)</span></h3>
+	<p>Array of camera zoom value per character</p>
+	
+	<h3>elementsFront <span class="vartype">(Array&#60;StageElement&#62;)</span></h3>
+	<p>Data of stage elements that should show in front of characters.</p>
+	
+	<h3>elementsBetween <span class="vartype">(Array&#60;StageElement&#62;)</span></h3>
+	<p>Data of stage elements that should show in front of girlfriend, but behind other characters.</p>
+	
+	<h3>elementsBack <span class="vartype">(Array&#60;StageElement&#62;)</span></h3>
+	<p>Data of stage elements that should show behind of players.</p>
+	
+	<h3>animFollowup <span class="vartype">(Array&#60;Array&#60;String&#62;&#62;)</span></h3>
+	<p>Arrays with 2 strings. The first string is the name of an animation and the second is the name of what animation should be played next.</p>
+	
+	<h3>cameraOffset <span class="vartype">(Array&#60;Array&#60;Float&#62;&#62;)</span></h3>
+	<p>Array of camera position offsets per character slot.</p>
+	
+	<h3>hide_girlfriend <span class="vartype">(Bool)</span></h3>
+	<p>Set to true to make girlfriend invisible.</p>
+	
+	<h3>charFacing <span class="vartype">(Array&#60;Int&#62;)</span></h3>
+	<p>Array of character slots that should face left.</p>
+</div>

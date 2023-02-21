@@ -1,0 +1,32 @@
+<head>
+	<link href="style.css" rel="stylesheet">
+</head>
+<iframe src="sidebar.html" class="sidebar"></iframe>
+<div class="mainbox">
+	<h1>Animation variables</h1>
+	<p>These are the values that are editable in character animations in the character file, as well as some other things.</p>
+	
+	<h3>name <span class="vartype">(String)</span></h3>
+	<p>The name of the animation, such as "idle", "singLEFT", "singDOWNmiss", "singUP-alt", etc.</p>
+	
+	<h3>anim <span class="vartype">(String)</span></h3>
+	<p>The prefix of frames in the xml file to use for this animation.</p>
+	
+	<h3>framerate <span class="vartype">(Int)</span></h3>
+	<p>The amount of frames per second, normally this is 24.</p>
+	
+	<h3>offset <span class="vartype">(Array&#60;Float&#62;)</span></h3>
+	<p>Offsets for this animation. This actually has 3 values instead of the usual 2 you'd see in other engines, the 3rd value is the X position when the character is flipped.</p>
+	
+	<h3>indicies <span class="vartype">(Array&#60;Int&#62;)</span></h3>
+	<p>After the game finds frames, it will pick these. The first frame is 0.</p>
+	
+	<h3>loop <span class="vartype">Bool</span></h3>
+	<p>Whether or not the animation should loop. All usual FNF animations have this disabled, yes, even the idle animations.</p>
+	
+	<h3>noteCameraOffset <span class="vartype">(Array&#60;Float&#62;)</span></h3>
+	<p>The offset the camera should have when focused on this character and playing this animation, if Note Camera Offset is enabled in Options.</p>
+	
+	<h3>nextAnim <span class="vartype">(String)</span></h3>
+	<p>The animation that should play after this one. This is actually not used in anything right now, don't use it</p>
+</div>
