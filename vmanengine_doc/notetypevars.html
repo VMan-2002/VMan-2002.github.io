@@ -3,5 +3,72 @@
 </head>
 <iframe src="sidebar.html" class="sidebar"></iframe>
 <div class="mainbox">
-	<h1>I will add this later because note types are kind of a mess right now with a lot of unused variables, not easy to tell which ones are actually implemented</h1>
+	<h1>Note Type variables</h1>
+	<p>These are the values for note types. Player's starting health is 1 and max health is 2</p>
+	
+	<h3>healthHit <span class="vartype">(Float)</span></h3>
+	<p>How much your health changes from hitting this note. Overridden by rating specific values when they are specified.</p>
+	
+	<h3>healthHitSick, healthHitGood, healthHitBad, healthHitShit <span class="vartype">(Float)</span></h3>
+	<p>How much your health changes from hitting this note with a specific rating.</p>
+	
+	<h3>healthMiss <span class="vartype">(Float)</span></h3>
+	<p>How much your health changes from missing this note.</p>
+	
+	<h3>healthMaxMult <span class="vartype">(Float)</span></h3>
+	<p>When hitting this note, your health can't increase above this amount multiplied by normal max health.</p>
+	
+	<h3>imagePrefix <span class="vartype">(String)</span></h3>
+	<p>A prefix for this note type's image. The default image name is "NOTE_assets", so by typing "hurt" in this value, it would be "hurtNOTE_assets"</p>
+	
+	<h3>animPostfix <span class="vartype">(String)</span></h3>
+	<p>A postfix for the animation played when characters sing this note.</p>
+	
+	<h3>animReplace <span class="vartype">(String)</span></h3>
+	<p>A replacement for the animation played when characters sing this note.</p>
+	
+	<h3>noteAnimPrefix <span class="vartype">(String)</span></h3>
+	<p>A prefix for this note type's animations in the xml file.</p>
+	
+	<h3>noteAnimReplace <span class="vartype">(String)</span></h3>
+	<p>A replacement for this note type's "scroll" anim (the note on it's own, not things such as holds).</p>
+	
+	<h3>bob <span class="vartype">(Float)</span></h3>
+	<p>Recreate the effects of black notes in Onslaught in <a href="https://gamebanana.com/mods/285296">Bob mod</a>. On hitting this note, this amount of health is drained over 3 seconds. If this effect is triggered while it is already happening, they overlap.</p>
+	
+	<h3>glitch <span class="vartype">(Bool)</span></h3>
+	<p>Recreate the effects of silver notes in Onslaught in <a href="https://gamebanana.com/mods/285296">Bob mod</a>. Makes the "bob" effect happen when this note is missed instead of hit.</p>
+	
+	<h3>guitar <span class="vartype">(Bool)</span></h3>
+	<p>If true, this note must be hit by holding the arrow key down and pressing the Guitar Strum key.</p>
+	
+	<h3>guitarHopo <span class="vartype">(Bool)</span></h3>
+	<p>If both this and "guitar" are true, this note can be hit normally if you've hit the previous guitar note.</p>
+	
+	<h3>guitarOpen <span class="vartype">(Bool)</span></h3>
+	<p>If both this and "guitar" are true, you must hit this note using ONLY the Guitar Strum key, and not holding down any arrows. If both this and "guitarHopo" are true, you have to instead hit this note by releasing the arrows of the previous note row.</p>
+	
+	<h3>characterName <span class="vartype">(String)</span></h3>
+	<p>Name of a character that should sing this note.</p>
+	
+	<h3>characterNum <span class="vartype">(Int)</span></h3>
+	<p>Index of a character that should sing this note.</p>
+	
+	<h3>charNames <span class="vartype">(Array&#60;String&#62;)</span></h3>
+	<p>Names of characters that should sing this note simultaneously.</p>
+	
+	<h3>charNums <span class="vartype">(Array&#60;String&#62;)</span></h3>
+	<p>Indexes of characters that should sing this note simultaneously.</p>
+	
+	<h3>confused <span class="vartype">(Bool)</span></h3>
+	<p>If true, this note appears in a random lane only visually.</p>
+	
+	<h3>hasPressNote <span class="vartype">(Bool)</span></h3>
+	<p>If false, the pressable arrow does not appear, only the hold.</p>
+	
+	<h3>hasReleaseNote <span class="vartype">(Bool)</span></h3>
+	<p>If true, a "release note" appears at the end of this note's hold. It is pressed by releasing the arrow key.</p>
+	
+	<h3>acronym <span class="vartype">(String)</span></h3>
+	<p>The name that shows on top of this note in the chart editor.</p>
 </div>
