@@ -24,4 +24,9 @@
 		trace("connected, now send data");
 		socket.send(JSON.stringify(sendobj));
 	});
+	
+	socket.addEventListener("error", function(evt) {
+		alert("Connection Failed");
+		window.close();
+	});
 </script>
