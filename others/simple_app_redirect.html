@@ -19,7 +19,7 @@
 		sendobj[item] = obj[item];
 	}
 	
-	var socket = new WebSocket("127.0.0.1:50102");
+	var socket = new WebSocket("ws://127.0.0.1:50102");
 	socket.addEventListener("open", function(evt) {
 		trace("connected, now send data");
 		socket.send(JSON.stringify(sendobj));
