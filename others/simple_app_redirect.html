@@ -13,4 +13,14 @@
 		obj[k] = b.get(k);
 	}
 	console.log(obj);
+	
+	var sendobj = {};
+	for (item of obj.pass.split(",")) {
+		sendobj[item] = obj[item];
+	}
+	
+	var socket = new WebSocket("127.0.0.1:50102");
+	socket.addEventListener("open", function(evt) {
+		socket.send(JSON.stringify(sendobj));
+	});
 </script>
