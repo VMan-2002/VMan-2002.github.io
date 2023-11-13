@@ -2,4 +2,15 @@
 <!-- Page that reads authentication data and sends it to a locally running app. -->
 <h1>Passing authorization to your app...</h1>
 <p>If needed, you may need to enable Javascript.</p>
-<script></script>
+<script>
+	var a = new URLSearchParams(window.location.search);
+	var b = new URLSearchParams(window.location.hash.substring(1));
+	var obj = {};
+	for (k of a.keys()) {
+		obj[k] = a.get(k);
+	}
+	for (k of b.keys()) {
+		obj[k] = b.get(k);
+	}
+	console.log(obj);
+</script>
