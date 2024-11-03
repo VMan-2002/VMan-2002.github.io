@@ -1,0 +1,77 @@
+<head>
+	<title>richikupo fanpage</title>
+</head>
+<style>
+	html {
+		background-color: darkcyan
+	}
+	body {
+		font-family: Comic Sans MS;
+		min-height: 750px;
+		
+	}
+	button {
+		font-size: 200%;
+		border-width: 7px;
+		border-style: ridge;
+	}
+	.box {
+		width: 40vw;
+		height: 40vh;
+		position:absolute;
+		border-width: 4px;
+		border-style: solid;
+		background-color: white;
+		padding: 4px;
+	}
+	.left {
+		left: 5vw;
+	}
+	.right {
+		right: 5vw;
+	}
+	.italic {
+		font-style: italic
+	}
+</style>
+<script>
+	function rnum(a) {
+		return Math.floor(Math.random() * a)
+	}
+	function col() {
+		return "rgb(" + rnum(256) + ", " + rnum(256) + ", " + rnum(256) + ")";
+	}
+	function a() {
+		alert("richikupo!!!!!!!!!")
+		alert("richikupo (richikupo)!!!!!!!!!")
+		alert("this is an awesome stream concept btw!!!!!! super fun!!!!")
+		var all = document.getElementsByTagName("*");
+		fonts = ["Comic Sans MS", "Verdana", "Papyrus", "Arial", "Calibri", "Times New Roman"]
+
+		for (var i=0, max=all.length; i < max; i++) {
+			var elem = all[i];
+			elem.style.color = col()
+			elem.style.fontSize = 5 + rnum(60)
+			elem.style.fontStyle = Math.random() > 0.5 ? "none" : "italic"
+			elem.style.textShadow = rnum(6) + "px " + rnum(6) + "px 0px " + col()
+			elem.style.fontFamily = fonts[rnum(fonts.length)]
+			elem.style.backgroundColor = col()
+		}
+	}
+</script>
+<body>
+	<h1>richikupo <span>fanpage</span> <span>that i made real quick while the stream going</span></h1>
+	<img src="https://pbs.twimg.com/profile_banners/4828551587/1594303780/1500x500" style="width:100%"></img>
+	<p>&nbsp;</p>
+	<h1>richikupo <span>fanpage</span></h1>
+	<h2>richikupo <span>fanpage</span></h2>
+	<p>richikupo <span>fanpage</span></p>
+	<h2>richikupo <span>fanpage</span></h2>
+	<h1>richikupo <span>fanpage</span></h1>
+	<h1 style="margin-left: 15vw" class="italic">the 2 arts that we saw earlier</h1>
+	<div class="box left"><img src="https://i.imgur.com/BYzcpOx.jpeg"/></div>
+	<div class="box right"><img src="https://i.imgur.com/T5xAXNQ.png"/></div>
+	<div style="height:45vh"></div>
+	<p class="italic">richikupo is so cool!!!! <span>richikupo is so cool!!!!</span> <span>richikupo is so cool!!!!</span> <span>richikupo is so cool!!!!</span> <span>richikupo</span><span> is</span><span> so</span><span> cool!!!!</span> <span>richikupo</span><span> is</span><span> so</span><span> cool!!!!</span></p>
+	<button onclick="a()">Click here to <span>richikupo</span></button>
+</body>
