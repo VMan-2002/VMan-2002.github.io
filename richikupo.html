@@ -16,8 +16,8 @@
 		border-style: ridge;
 	}
 	.box {
-		width: 40vw;
-		height: 40vh;
+		width: 40%;
+		height: 40%;
 		position:absolute;
 		border-width: 4px;
 		border-style: solid;
@@ -25,13 +25,38 @@
 		padding: 4px;
 	}
 	.left {
-		left: 5vw;
+		left: 5%;
 	}
 	.right {
-		right: 5vw;
+		right: 5%;
 	}
 	.italic {
 		font-style: italic
+	}
+	h2 audio, .vmid, h1 .ismall {
+		vertical-align: middle
+	}
+	.tcontents {
+		border-style: outset;
+		width: 500px;
+		box-sizing: border-box;
+		padding: 6px;
+	}
+	.tcontents h2, .tcontents h3, .tcontents p {
+		margin: 0px
+	}
+	.tcontents, .tcontents hr {
+		border-color: cyan;
+		background-color: darkgray
+	}
+	.ismall {
+		width: 56px;
+		height: 56px;
+	}
+	.itiny {
+		width: 32px;
+		height: 32px;
+		vertical-align: middle
 	}
 </style>
 <script>
@@ -58,20 +83,53 @@
 			elem.style.backgroundColor = col()
 		}
 	}
+	{
+		let f = (e) => {
+			changenotes.style.display = location.hash == "#showchangenotes" ? "block" : "none"
+		}
+		onhashchange = f
+		onload = f
+	}
 </script>
 <body>
-	<h1>richikupo <span>fanpage</span> <span>that i made real quick while the stream going</span></h1>
-	<img src="https://pbs.twimg.com/profile_banners/4828551587/1594303780/1500x500" style="width:100%"></img>
-	<p>&nbsp;</p>
-	<h1>richikupo <span>fanpage</span></h1>
+	<h1>richikupo <span>fanpage</span> <span>that i made real quick while the stream going</span><img src="kupoassets/hi.gif" class="ismall"/></h1>
+	<img src="kupoassets/banner.jpg" style="width:100%; aspect-ratio: 15/5"></img>
+	<p class="italic"><small><img src="kupoassets/ooo.png" class="ismall"/> v2</small></p>
+	<div class="tcontents">
+		<h2><span>NEW!</span> <span>Table</span> of <i>RichiContents</i> <img src="kupoassets/lick.gif" class="itiny"/></h2>
+		<hr>
+		<div class="italic">
+			<a href="#rpage">richikupo fanpage</a><br>
+			<a href="#images">the 2 arts</a><br>
+			<a href="#swagaudio">swag audio <span>(NEW!)</span></a>
+			<hr>
+			<a href="#showchangenotes">change notes</a><br>
+			<a href="https://moogle.tv">richikupo's twitch</a>
+		</div>
+	</div>
+	<div class="tcontents" id="changenotes">
+		<h3>v1</h3>
+		<p>I made this for the twitch controls windows 98 stream. <a href="https://youtu.be/Msub6mJe3Dk">Watch the video I made about it!</a> <img src="kupoassets/cheer.gif" class="itiny"/></p>
+		<hr>
+		<h3>v2</h3>
+		<p>Added swag audios (of which there is 1 so far)! Added table of richicontents! Added change notes! Dotted some emotes around the place! <img src="kupoassets/smugdance.gif" class="itiny"/></p>
+	</div>
+	<h1 id="rpage">richikupo <span>fanpage</span></h1>
 	<h2>richikupo <span>fanpage</span></h2>
 	<p>richikupo <span>fanpage</span></p>
 	<h2>richikupo <span>fanpage</span></h2>
 	<h1>richikupo <span>fanpage</span></h1>
-	<h1 style="margin-left: 15vw" class="italic">the 2 arts that we saw earlier</h1>
-	<div class="box left"><img src="https://i.imgur.com/BYzcpOx.jpeg"/></div>
-	<div class="box right"><img src="https://i.imgur.com/T5xAXNQ.png"/></div>
-	<div style="height:500px"></div>
-	<button onclick="a()">Click here to <span>richikupo</span></button>
-	<p class="italic">richikupo is so cool!!!! <span>richikupo is so cool!!!!</span> <span>richikupo is so cool!!!!</span> <span>richikupo is so cool!!!!</span> <span>richikupo</span><span> is</span><span> so</span><span> cool!!!!</span> <span>richikupo</span><span> is</span><span> so</span><span> cool!!!!</span></p>
+	<h1 style="margin-left: 15%" class="italic" id="images">the 2 arts that we saw earlier</h1>
+	<div class="box left"><img src="kupoassets/im.jpeg"/></div>
+	<div class="box right"><img src="kupoassets/omg.png"/></div>
+	<div style="height:40%">
+	</div>
+		<div style="height:20px"></div>
+	<p class="italic">richikupo is so cool!!!! <span>richikupo is so cool!!!!</span> <span>richikupo is so cool!!!!</span> <span>richikupo is so cool!!!!</span> <span>richikupo</span><span> is</span><span> so</span><span> cool!!!!</span> <span>richikupo</span><span> is</span><span> so</span><span> cool!!!!</span> <img src="kupoassets/clap.gif" class="itiny"/></p>
+	<button onclick="a()">Click here to <span>richikupo</span></button> <img src="kupoassets/laugh.png" class="ismall vmid"/>
+	<h1 class="italic" id="swagaudio">swag audio</h1>
+	<h2>Kupo <span>believes</span> in <span>you</span> <img src="kupoassets/weball.gif" class="itiny"/> <small>(from <span>mario 64</span> <span>stream</span> with <span>sethraccoon</span>)</small>: <audio controls>
+		<source src="kupoassets/BelieveInYouKupo.wav" type="audio/wav">
+		NOOOOOOOO
+	</audio></h2>
 </body>
