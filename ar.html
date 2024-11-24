@@ -1,17 +1,14 @@
 <script>
 	function load() {
-		tx1 = document.getElementById("p")
-		tx2 = document.getElementById("p1")
-		tx3 = document.getElementById("p2")
 		if (location.hash) {
-			let path = location.hash.slice(1)/*.replace(/.hash./g, "#").replace(/.qmark./g, "?").replace(/.slash./g, "/").replace(/.dslash./g, "//").replace(/../g, ".")*/
-			tx1.innerHTML = "You're on your way to:"
-			tx2.innerHTML = path
-			tx3.innerHTML = "If this launches an application, you may close this tab afterward."
+			let path = location.hash.slice(1)
+			p.innerHTML = "You're on your way to:"
+			p1.innerHTML = path
+			p2.innerHTML = "If this launches an application, you may close this tab afterward."
 			window.location.replace(path)
 		} else {
-			tx1.innerHTML = "This page auto-redirects to the set hash."
-			tx2.innerHTML = "Example: ar.html#mailto:someone@gmail.com"
+			p.innerHTML = "This page auto-redirects to the set hash."
+			p1.innerHTML = "Example: ar.html#mailto:someone@gmail.com"
 		}
 	}
 </script>
