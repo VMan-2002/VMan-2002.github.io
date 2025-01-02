@@ -1,0 +1,120 @@
+<head>
+	<title id="title">...</title>
+	<style id="fontstyle"></style>
+	<style>
+		spoiler {
+			background-color:black
+		}
+		spoiler:hover {
+			background-color:rgb(0, 0, 0, 0.1)
+		}
+	</style>
+	<script>
+		//Use by console
+		key = "Sandwich KING"
+		function encode(str) {
+			if (typeof(str) == "undefined")
+				str = search.get("c")
+			let tmpswap = swap
+			swap = true
+			cipher(str, console.log)
+			swap = tmpswap
+		}
+		function decode(str) {
+			cipher(str, console.log)
+		}
+		
+		//Internal
+		chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</>0123456789\"+-=_.─━│┃┄┅┆┇┈┉┊┋┌┍┎┏┐┑┒┓└┕┖┗┘┙┚┛├┝┞┟┠┡┢┣┤┥┦┧┨┩┪┫┬┭┮┯┰┱┲┳┴┵┶┷┸┹┺┻┼┽┾┿╀╁╂╃╄╅╆╇╈╉╊╋╌╍╎╏═║╒╓╔╕╖╗╘╙╚╛╜╝╞╟╠╡╢╣╤╥╦╧╨╩╪╫╬╭╮╯╰╱╲╳╴╵╶╷╸╹╺╻╼╽╾╿"
+		dchars = chars
+		dkchars = "S┃┠╔Q8f╢╓╫z╀╧p┓┚WF┌┒╯┆┱┍agsw╸e6┭c╬╰┈.O-Y┇╙d┾B╗╁┝n╿┩┽╴UH4╎>j/╨1┧╡x│╆╈vb═┟┴M━╭┄╷┦┵╠V─├╊┣┊┯P┖┐┲┉mo┕╉╞╹╃┰┹9╅╛╚T┅┢┫╲_┡┞┳╪┿RE3╱┸╂╤╟5╳K╩rDXLil2┶└J┘╍╏╝┷╌\"I╥╇0┎┼┑┙╼C║╒╻┬╶╘┏G╮<╵┻┺Z7┨+hkAt╽┪╖╦┋┮=┛┥Ny╄q╾┗╜╣╋┤╺u╕"
+		kchars = dkchars
+		str_c = "c"
+		swap = false
+		function remAt(tx, n) {
+			let result = tx.split("")
+			result.splice(n, 1)
+			return result.join("")
+		}
+		function runKey(tx) {
+			let cAdd = ""
+			let cAddEnd = ""
+			chars = dchars
+			kchars = dkchars
+			for (t of tx) {
+				let ind = kchars.indexOf(t)
+				if (ind != -1) {
+					kchars = remAt(kchars, ind)
+					cAdd += t
+				} else {
+					let n = t.charCodeAt(0) % kchars.length
+					cAddEnd += kchars.charAt(n)
+					kchars = remAt(kchars, n)
+				}
+			}
+			kchars = cAdd + kchars + cAddEnd
+			let x = 2 + (tx.length % 6)
+			let fshuf = x + (tx.split("").map(a => a.charCodeAt()).reduce((a, b) => a + b) % (60 - x))
+			let kcharsa = kchars.split("")
+			while (fshuf != 0) {
+				fshuf -= 1;
+				let sp = kcharsa.splice((fshuf * 5) % (dchars.length * 0.9), Math.ceil(dchars.length * 0.2));
+				kcharsa = kcharsa.concat(sp)
+			}
+			kchars = kcharsa.join("")
+			return kchars
+		}
+		function cipher(text, then) {
+			runKey(key)
+			if (swap) {
+				let tmp = kchars
+				kchars = chars
+				chars = tmp
+			}
+			let result = ""
+			let add
+			for (t of text) {
+				if (kchars.indexOf(t) == -1) {
+					add = t
+				} else {
+					add = chars.charAt(kchars.indexOf(t))
+				}
+				result += add
+			}
+			return then(result)
+		}
+		function displayTx(text) {
+			body.innerHTML = text
+			title.innerHTML = "Unlocked page"
+			return text
+		}
+		search = new URLSearchParams(location.search)
+		onload = () => {
+			if (location.search != "") {
+				if (search.get("k") == 1) {
+					title.innerHTML = "Encrypted webpage"
+					keyPrompt.style.display = ""
+					baseMessage.style.display = "none"
+					if (search.get("h") != null) {
+						keyHint.innerHTML += search.get("h")
+						keyHint.style.display = ""
+					}
+				} else {
+					displayTx(decodeURI(search.get("c")))
+				}
+			} else {
+				baseMessage.innerHTML = "This page doesn't exist... or does it?"
+			}
+		}
+	</script>
+</head>
+<body id="body">
+	<h2 id="baseMessage">Enable JavaScript to view this page.</h2>
+	<div id="keyPrompt" style="display:none">
+		<h2>Enter key to decode and view this page.</h2>
+		<h4 id="keyHint" style="display:none">Hint for the key: </h4>
+		<label for="keyInput">Key: </label><input id="keyInput"></input>
+		<button id="keyConfirm" onclick="key = keyInput.value; cipher(decodeURI(search.get(str_c)), displayTx)">Confirm</button>
+		<p>If you see garbage after clicking "Confirm", you entered the password wrong.</p>
+	</div>
+</body>
