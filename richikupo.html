@@ -90,11 +90,19 @@
 		onhashchange = f
 		onload = f
 	}
+	function lol() {
+		lolplay.pause()
+		all1.style.display = "none"
+		plentiful.style.display = "block"
+		plety.src = "https://www.youtube.com/embed/RhaGh_1Tvg8?autoplay=1"
+	}
 </script>
 <body>
+	<div id="all1">
 	<h1 id="top">richikupo <span>fanpage</span> <span>that i made real quick while the stream going</span><img src="kupoassets/hi.gif" class="ismall"/></h1>
+	<h3 id="top"><span>hey</span> stream viewers, <span>remember this?</span> i've <span>updated</span> it :3</h3>
 	<img src="kupoassets/banner.jpg" style="width:100%; aspect-ratio: 15/5"></img>
-	<p class="italic"><small><img src="kupoassets/ooo.png" class="ismall"/> v2</small></p>
+	<p class="italic"><small><img src="kupoassets/ooo.png" class="ismall"/> v2.lol</small></p>
 	<div class="tcontents">
 		<h2><span>NEW!</span> <span>Table</span> of <i>RichiContents</i> <img src="kupoassets/lick.gif" class="itiny"/></h2>
 		<hr>
@@ -113,6 +121,9 @@
 		<hr>
 		<h3>v2</h3>
 		<p>Added swag audios (of which there is 1 so far)! Added table of richicontents! Added change notes! Dotted some emotes around the place! <img src="kupoassets/smugdance.gif" class="itiny"/></p>
+		<hr>
+		<h3>v2.lol</h3>
+		<p>Find a new swag audio</p>
 	</div>
 	<h1 id="rpage">richikupo <span>fanpage</span></h1>
 	<h2>richikupo <span>fanpage</span></h2>
@@ -132,4 +143,12 @@
 		<source src="kupoassets/BelieveInYouKupo.wav" type="audio/wav">
 		NOOOOOOOO
 	</audio></h2>
+	<h2>Click here: <audio onplay="lol()" id="lolplay" controls>
+		<source src="kupoassets/BelieveInYouKupo.wav" type="audio/wav">
+		NOOOOOOOO
+	</audio></h2>
+	</div>
+	<div id="plentiful" style="display:none">
+		<iframe id="plety" width="100%" height="100%"></iframe>
+	</div>
 </body>
