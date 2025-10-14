@@ -1,13 +1,6 @@
 <head>
-	<title>Restoration Disk - by Artifyber</title>
+	<title>Restoration Disk</title>
 	<style>
-		@font-face {
-			font-family: right;
-			src: url(right.ttf);
-		}
-		* {
-			font-family: right;
-		}
 		h1 {
 			color:white;
 			text-shadow: calc(-0.1vw - 2px) 0px 0.1vmax #FF3C68, calc(0.1vw + 2px) 0px 0.1vmax #66D5FF, 0px 0px 3vmin black;
@@ -34,13 +27,6 @@
 		html {
 			background-color: #040612;
 			background: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/43793431-0f4a-473b-b346-7c30df84af10.avif");
-			background-position: center;
-			background-size: cover;
-			background-attachment:fixed;
-			min-height: 100vh;
-		}
-		body {
-			margin: 0px
 		}
 		.box {
 			width: calc(67vh - 3vw);
@@ -112,7 +98,7 @@
 			}
 		}
 	</style>
-	<!-- PLEASE WORK -->
+	<link rel="stylesheet" href="style.css"/>
 	<meta property="theme-color" content="#2E18AD">
 	<meta property="og:description" content="comic by Artifyber">
 	<meta property="og:title" content="Restoration Disk">
@@ -139,34 +125,7 @@
 		<a href="https://bsky.app/profile/artifyber.xyz/post/3lxxn3rz2wk2p"><img id="imp6" src="https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:4hcfxhg5cm34dyidnhfxxpyp/bafkreicmeb4uasctgqn5xbn6ju4alxo5k2bn2q4h3u5ww54logqjoc7s6i@jpeg"></a>
 		<p id="plab7">Page 7</p>
 		<a href="https://bsky.app/profile/artifyber.xyz/post/3ly26uy3zns26"><img id="imp7" src="https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:4hcfxhg5cm34dyidnhfxxpyp/bafkreihwmncctjqzeylevwc7d2wrliumlmwvyvlukpvfwvznjz6yc4563i@jpeg"></a>
+		<a class="morefromarti" href="index.html">More from Artifyber</a>
 	</div>
 </body>
-<script>
-	do {
-		let cpage = 0
-		let pagelabs = [plab1, plab2, plab3, plab4, plab5, plab6, plab7]
-		let pages = [imp1, imp2, imp3, imp4, imp5, imp6, imp7]
-		
-		let cpageswitch = (by) => {
-			cpage += by
-			if (cpage > 7)
-				cpage = 0
-			else if (cpage < 0)
-				cpage = 7
-			
-			pageindicator.style.display = cpage == 0 ? "none" : "inline"
-			pagenum.innerHTML = cpage
-			
-			for (i in pages) {
-				pagelabs[i].style.display = cpage != 0 ? "none" : "block"
-				pages[i].style.display = cpage - 1 != i && cpage != 0 ? "none" : "block"
-			}
-		}
-		
-		butleft.addEventListener("click", () => cpageswitch(-1))
-		butright.addEventListener("click", () => cpageswitch(1))
-	} while (false)
-
-</script>
-
-
+<script src="comic.js"></script>

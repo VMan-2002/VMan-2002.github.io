@@ -1,0 +1,19 @@
+@font-face {
+	font-family: right;
+	src: url(right.ttf);
+}
+* {
+	font-family: right;
+}
+body {
+	margin: 0px
+}
+html {
+	background-position: center;
+	background-size: cover;
+	background-attachment:fixed;
+	min-height: 100vh;
+}
+.morefromarti {
+	color:gray
+}
