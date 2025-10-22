@@ -43,4 +43,16 @@
 	
 	butleft.addEventListener("click", () => cpageswitch(-1))
 	butright.addEventListener("click", () => cpageswitch(1))
+	
+	if (document.getElementById("charinfos")) {
+		let func = (e) => {
+			if (e.target.value == "")
+				return;
+			if (e.target.value.startsWith("https://"))
+				location = e.target.value;
+			else
+				location = "https://artifyber.xyz/?" + e.target.value + "&fromUrl=" + location + "&fromTitle=" + document.title
+		}
+		charinfos.onchange = func
+	}
 }
